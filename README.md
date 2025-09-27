@@ -29,8 +29,28 @@ STEP-7: The junction character where these two meet forms the cipher character.
 STEP-8: Repeat the above steps to generate the entire cipher text.
 
 
-## PROGRAM
+## PROGRAM:
+#include <stdio.h>
+#include <string.h>
+void vigenereCipher(char *text, char *key, int decrypt) {
+int len = strlen(text), keyLen = strlen(key);
+for (int i = 0; i < len; i++) {
+int shift = key[i % keyLen]- 'A';
+text[i] = 'A' + (text[i]- 'A' + (decrypt ? 26- shift : shift)) % 26;
+}
+}
+int main() {
+char text[] = "YOKESH", key[] = "KEY";
+vigenereCipher(text, key, 0);
+printf("Encrypted Message: %s\n", text);
+vigenereCipher(text, key, 1);
+printf("Decrypted Message: %s\n", text);
+return 0;
+}
 
-## OUTPUT
+## OUTPUT:
+<img width="690" height="489" alt="image" src="https://github.com/user-attachments/assets/a73a0200-1ef8-4235-bc49-34e40ae63b99" />
 
-## RESULT
+
+## RESULT:
+The code was executed successfully
