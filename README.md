@@ -30,6 +30,7 @@ STEP-8: Repeat the above steps to generate the entire cipher text.
 
 
 ## PROGRAM:
+```
 #include <stdio.h>
 #include <string.h>
 void vigenereCipher(char *text, char *key, int decrypt) {
@@ -47,7 +48,7 @@ vigenereCipher(text, key, 1);
 printf("Decrypted Message: %s\n", text);
 return 0;
 }
-
+```
 ## OUTPUT:
 <img width="690" height="489" alt="image" src="https://github.com/user-attachments/assets/a73a0200-1ef8-4235-bc49-34e40ae63b99" />
 
